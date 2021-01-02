@@ -26,7 +26,7 @@
         return $relevant_data;
     }
 
-    function getRatio($array_content){
+    /*function getRatio($array_content){
         $arrayRatio=array();
         $tamponiGiornalieri=array();
         for($i=0;$i<count($array_content);$i++){
@@ -36,19 +36,19 @@
             $arrayRatio[$i]=round($ratio,5);
         }
         return $arrayRatio;
-    }  
+    }*/  
 
     function getRatioGiornaliero($array_content){
-        
         $arrayRatio=array();
-        $tamponiGiornalieri=array();
+        $j=9;
         for($i=10;$i>=1;$i--){
             $positivi=(integer)$array_content[$i]['nuovi_positivi'];
             $tampgiornoi=(integer)$array_content[$i]['tamponi'];
             $tampgiornimeno1=(integer)$array_content[$i-1]['tamponi'];
             $tamponiGiornalieri=$tampgiornoi-$tampgiornimeno1;
             $ratio=($positivi/$tamponiGiornalieri)*100;
-            $arrayRatio[$i]=round($ratio,5);
+            $arrayRatio[$j]=round($ratio,5);
+            $j--;
         }
         return $arrayRatio;
     }  
@@ -111,7 +111,14 @@
         $tamponiGiornalieri=$tampgiornoi-$tampgiornimeno1;
         echo '<br>NUOVI CASI : '.$array_content[$nr]['nuovi_positivi'];
         echo '<br>TAMPONI GIORNALIERI : '.$tamponiGiornalieri;
-        echo '<br>RAPPORTO NUOVI CASI/TAMPONI GIORNALIERI : '.$arrayRatio[$nr]."%"; 
+        echo '<br>RAPPORTO NUOVI CASI/TAMPONI GIORNALIERI : '.$arrayRatio[$nr-1]."%"; 
+    }
+
+    function printRatioTot($array_content){
+        $casi=(integer)$array_content[10]['totale_casi'];
+        $tamponi=(integer)$array_content[10]['tamponi'];
+        $rapporto=$casi/$tamponi;
+        echo "RAPPORTO TOTALE CASI/TOTALE TAMPONI EFFETTUATI: ".$rapporto."%";
     }
 
     function lateralBar1($array_content){
