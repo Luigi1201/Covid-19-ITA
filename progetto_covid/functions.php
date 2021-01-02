@@ -1,6 +1,5 @@
 <?php
  
-
     function insert(){    
         $filename='https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv';
         $filecsv = array_map('str_getcsv', file($filename));
@@ -8,16 +7,21 @@
             $a=array_combine($filecsv[0],$a);
         });
         array_shift($filecsv);
-        $nr_elements=count($filecsv);
-        $start=$nr_elements-10;
+        return $filecsv;
+        
+    }
+
+    function setNrElements($array_content,$nr){
+        $nr_elements=count($array_content);
+        $start=$nr_elements-$nr;
         $j=0;
         $relevant_data=array();
         for($i=$start;$i<$nr_elements;$i++){
-            $relevant_data[$j]=array_merge($filecsv[$i]);
+            $relevant_data[$j]=array_merge($array_content[$i]);
             $j++;
         }
         for($i=0;$i<$nr_elements;$i++){
-            unset($filecsv[$i]);  
+            unset($array_content[$i]);  
         }
         return $relevant_data;
     }
@@ -34,7 +38,22 @@
         return $arrayRatio;
     }  
 
-    function tables($array_content,$arrayRatio){
+    function getRatioGiornaliero($array_content){
+        
+        $arrayRatio=array();
+        $tamponiGiornalieri=array();
+        for($i=10;$i>=1;$i--){
+            $positivi=(integer)$array_content[$i]['nuovi_positivi'];
+            $tampgiornoi=(integer)$array_content[$i]['tamponi'];
+            $tampgiornimeno1=(integer)$array_content[$i-1]['tamponi'];
+            $tamponiGiornalieri=$tampgiornoi-$tampgiornimeno1;
+            $ratio=($positivi/$tamponiGiornalieri)*100;
+            $arrayRatio[$i]=round($ratio,5);
+        }
+        return $arrayRatio;
+    }  
+
+    function tables($array_content){
  
         for($i=9;$i>=0;$i--){
             $middle = strtotime($array_content[$i]['data']);
@@ -71,7 +90,6 @@
                     <div class="row"><div class="col" style="text-align:right">INGRESSI TERAPIA INTENSIVA:</div>'.'<div class="col" style="text-align:left">'.$array_content[$i]['ingressi_terapia_intensiva'].'</div>'.'</div>
                     <div class="row"><div class="col" style="text-align:right">NOTE TEST:</div>'.'<div class="col" style="text-align:left">'.$array_content[$i]['note_test'].'</div>'.'</div>
                     <div class="row"><div class="col" style="text-align:right">NOTE CASI:</div>'.'<div class="col" style="text-align:left">'.$array_content[$i]['note_casi'].'</div>'.'</div>
-                    <div class="row"><div class="col" style="text-align:right">RAPPORTO NUOVI CASI / TAMPONI EFFETTUATI:</div><div class="col" style="text-align:left">'.$arrayRatio[$i].'%</div></div>
                 </div>
             </div>
             <div class="container-fluid" style="height:5px;background-color:red;margin-top:20px;"></div>
@@ -85,6 +103,15 @@
         $middle = strtotime($array_content[$nr]['data']);
         $new_date = date('d-m-Y', $middle);
         echo $new_date;
+    }
+
+    function printInfo($arrayRatio,$array_content,$nr){
+        $tampgiornoi=(integer)$array_content[$nr]['tamponi'];
+        $tampgiornimeno1=(integer)$array_content[$nr-1]['tamponi'];
+        $tamponiGiornalieri=$tampgiornoi-$tampgiornimeno1;
+        echo '<br>NUOVI CASI : '.$array_content[$nr]['nuovi_positivi'];
+        echo '<br>TAMPONI GIORNALIERI : '.$tamponiGiornalieri;
+        echo '<br>RAPPORTO NUOVI CASI/TAMPONI GIORNALIERI : '.$arrayRatio[$nr]."%"; 
     }
 
     function lateralBar1($array_content){
