@@ -61,7 +61,7 @@ $(document).ready(function(){
             labels: [ 'Casi con Deceduti(%)' , 'Totale casi(%)' ],
             datasets: [{
                 label: ['Deceduti', 'Totale casi'],
-                backgroundColor: ['blue','yellow'],
+                backgroundColor: ['yellow','blue'],
                 borderColor: ['black','black'],
                 data: [ rapportoD , rapportoC ]
                     

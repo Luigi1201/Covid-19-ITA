@@ -37,7 +37,7 @@
     </head>
     <body>
         <?php
-        require 'functions.php';
+        require 'php/functions.php';
         $array_content=array();
         $array_content=insert();
         $nr=10; //nr giorni da tenere in considerazione,in questo caso 10
@@ -53,8 +53,8 @@
         <div class="container-fluid" id="menu">
             <ul id="menu">
                 <li><a href="index.php">HOME</a></li>
-                <li><a href="tabels.php">TABELLE</a></li> 
-                <li><a href="rapporto.php">RAPPORTO</a></li>
+                <li><a href="php/tabels.php">TABELLE</a></li> 
+                <li><a href="php/rapporto.php">RAPPORTO</a></li>
                 <li><a href="https://github.com/Luigi1201/Covid-19-ITA" target="_blank">GIT HUB</a></li>
             </ul>
         </div>
@@ -141,7 +141,7 @@
                             </aside>
                             <aside id="spaceBL">
                                 <div class="row">
-                                <form action="rapporto.php" style="align-content:center" >
+                                <form action="php/rapporto.php" style="align-content:center" >
                                       <button type="submit" >
                                         ALTRE INFORMAZIONI
                                       </button>  
