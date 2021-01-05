@@ -8,6 +8,8 @@
         <!-- css -->
         <link rel="stylesheet" href="css/stile.css">
         <link rel="stylesheet" href="css/menu.css">
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <!-- chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <!-- bootstrap -->
@@ -41,6 +43,12 @@
         $nr=10; //nr giorni da tenere in considerazione,in questo caso 10
         $array_content=setNrElements($array_content,$nr);       
         ?>
+        <script>
+            var json=<?php echo json_encode($array_content)?>; 
+            var jsStr=JSON.stringify(json);
+            var objdata = JSON.parse(jsStr);
+            var arrobj = Object.values(objdata);  
+        </script> 
         <a name="inizio" ></a>
         <div class="container-fluid" id="menu">
             <ul id="menu">
@@ -56,16 +64,12 @@
             <div class="row">
                 <div class="col-9">
                     <div class="container">
-                        <h6 style="margin-top:50px"><font face="Comic sans MS" size="5">NUOVI POSITIVI</font></h6>
-                        <script>
-                            var json=<?php echo json_encode($array_content)?>; 
-                            var jsStr=JSON.stringify(json);
-                            var objdata = JSON.parse(jsStr);
-                            var arrobj = Object.values(objdata);  
-                        </script>                          
-                        <canvas id="myCanvas"></canvas>
-                        <script type="text/javascript"> firstChart(arrobj); </script>
-                            
+                        <h6 style="margin-top:50px"><font face="Comic sans MS" size="5">NUOVI POSITIVI</font></h6>                         
+                        <canvas id="myCanvas"></canvas>                            
+                    </div>
+                    <div class="container" style="margin-top:5rem">
+                        <h6 style="margin-top:50px"><font face="Comic sans MS" size="5">PERCENTUALE DECEDUTI/TOTALE CASI</font></h6>             <div class="container-fluid" style ="text-align:center;margin-top:1rem;margin-bottom:1rem"><strong id="rdcs"></strong></div>          
+                        <canvas id="myCanvas2"></canvas>                            
                     </div>
                 </div>
                 <div class="col-3" id="barraLaterale" >
@@ -140,6 +144,6 @@
             
         </footer>
       
-        
+           
     </body>
 </html>

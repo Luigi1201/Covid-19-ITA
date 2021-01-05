@@ -88,7 +88,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content" style="margin-top:50px">RAPPORTO CASI TOTALI/TAMPONI TOTALI></h3>
+                    <h3 id="content" style="margin-top:50px">RAPPORTO CASI TOTALI/TAMPONI TOTALI</h3>
                 </div>
                 <div class="row">
                     <p id="content"><?php printRatioTot($array_content) ?></p>

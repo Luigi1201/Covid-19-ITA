@@ -1,4 +1,4 @@
-function changeData(arrobj) {
+function changeData() {
     var length = arrobj.length;
     var datastart;
     var newdate;
@@ -9,8 +9,22 @@ function changeData(arrobj) {
     }
 }
 
-function firstChart(arrobj){
-    changeData(arrobj);
+function roundTo(value, places){
+    var power = Math.pow(10, places);
+    return Math.round(value * power) / power;
+ }
+
+function ratioDecedutiCasitot() {
+    var deceduti  = parseInt(arrobj[9]['deceduti']);
+    var casi = parseInt(arrobj[9]['totale_casi']);
+    var rapportoDecedutiCasitot = (deceduti/casi)*100;  
+    rapportoDecedutiCasitot = roundTo(rapportoDecedutiCasitot, 3);
+    return rapportoDecedutiCasitot;
+}
+
+$(document).ready(function(){
+
+    changeData();
     var ctx = document.getElementById('myCanvas').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -28,5 +42,27 @@ function firstChart(arrobj){
         },
         // Configuration options go here
         options: {}
+    }); 
+    
+
+    var text = document.getElementById("rdcs");
+    var rapportoD = ratioDecedutiCasitot();
+    text.innerHTML = "Sono deceduti dopo essere risultati positivi il " + rapportoD + "% dei pazienti" ;
+    var rapportoC = 100-rapportoD;
+    ctx = document.getElementById('myCanvas2').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: [ 'Casi con Deceduti(%)' , 'Totale casi(%)' ],
+            datasets: [{
+                label: ['Deceduti', 'Totale casi'],
+                backgroundColor: ['blue','yellow'],
+                borderColor: ['black','black'],
+                data: [ rapportoD , rapportoC ]
+                    
+            }]
+        },
+        options: {}
     });
-}
+    
+});

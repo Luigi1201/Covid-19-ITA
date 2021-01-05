@@ -24,19 +24,7 @@
             unset($array_content[$i]);  
         }
         return $relevant_data;
-    }
-
-    /*function getRatio($array_content){
-        $arrayRatio=array();
-        $tamponiGiornalieri=array();
-        for($i=0;$i<count($array_content);$i++){
-            $positivi=(integer)$array_content[$i]['nuovi_positivi'];
-            $tamponiTotali=(integer)$array_content[$i]['tamponi'];
-            $ratio=($positivi/$tamponiTotali)*100;
-            $arrayRatio[$i]=round($ratio,5);
-        }
-        return $arrayRatio;
-    }*/  
+    }  
 
     function getRatioGiornaliero($array_content){
         $arrayRatio=array();
