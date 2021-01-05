@@ -41,7 +41,12 @@ $(document).ready(function(){
             }]
         },
         // Configuration options go here
-        options: {}
+        options: {
+            legend : {
+                display : true,
+                position : "bottom"
+            }
+        }
     }); 
     
 
@@ -62,7 +67,12 @@ $(document).ready(function(){
                     
             }]
         },
-        options: {}
+        options: {
+            legend : {
+                display : true,
+                position : "bottom"
+            }
+        }
     });
     
 });

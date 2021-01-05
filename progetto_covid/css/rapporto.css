@@ -1,3 +1,10 @@
+body{
+    background-image: url(../contentMedia/COVID-19.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 #start{
     bottom:30px;
     right:30px;
@@ -13,46 +20,47 @@
 }
 
 #content{
+    margin-top:2rem;
     width:100%;
     text-align: center;
 }
 
 .chart-container{
     width:100%;
-    height: 400px;
-    margin: 0 auto;
+    height:400px;
+    margin: auto;
     
 }
 
 .pie-chart-container{
-    width:600px;
-    height:600px;
-    margin: 0 auto;
+    width:35rem;
+    height:100%;
+    margin:0 auto;
     
 }
 
 .andamento-chart-container{
     width:100%;
     height: 500px;
-    margin: 0 auto;
+    margin:0 auto;
 }
 
 .andamento-chart{
     width:800px;
-    height:400px;
-    margin: 0 auto;
+    height:100%;
+    margin:0 auto;
 }
 
 .tot-chart-container{
     width:100%;
-    height: 500px;
-    margin: 0 auto;
+    height: 400px;
+    margin:0 auto;
 }
 
 .tot-chart{
-    width:800px;
-    height:400px;
-    margin: 0 auto;
+    width:35rem;
+    height:100%;
+    margin:0 auto;
 }
 
 

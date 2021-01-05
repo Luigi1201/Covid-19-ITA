@@ -59,18 +59,32 @@
             </ul>
         </div>
         
-        <div id="separatore"><h1>COVID-19 ITALIA</h1></div>
+        <div id="separatore"><h1 style="width:100%;text-align:center;text-decoration:underline">COVID-19 ITALIA</h1></div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-9">
-                    <div class="container">
-                        <h6 style="margin-top:50px"><font face="Comic sans MS" size="5">NUOVI POSITIVI</font></h6>                         
-                        <canvas id="myCanvas"></canvas>                            
+                    <div class="container-fluid">
+                        <h6 style="margin-top:8rem;width:100%;text-align:center">
+                            <font face="Comic sans MS" size="5">NUOVI POSITIVI</font>
+                        </h6>  
+                        <div class="chart-container">
+                            <div class="line-chart-container">
+                                <canvas id="myCanvas"></canvas>
+                            </div>              
+                        </div>    
                     </div>
-                    <div class="container" style="margin-top:5rem">
-                        <h6 style="margin-top:50px"><font face="Comic sans MS" size="5">PERCENTUALE DECEDUTI/TOTALE CASI</font></h6>             <div class="container-fluid" style ="text-align:center;margin-top:1rem;margin-bottom:1rem"><strong id="rdcs"></strong></div>          
-                        <canvas id="myCanvas2"></canvas>                            
+                    <div class="container-fluid" style="margin-top:5rem">
+                        <h6 style="width:100%;text-align:center">
+                            <font face="Comic sans MS" size="5">PERCENTUALE DECEDUTI/TOTALE CASI</font>
+                        </h6>
+                        <div class="container-fluid" style ="text-align:center;margin-top:1rem;margin-bottom:1rem"><strong id="rdcs"></strong></div>  
+                        <div class=chart-container>
+                            <div class="pie-chart-container">
+                                <canvas id="myCanvas2"></canvas>
+                            </div>    
+                        </div>
                     </div>
+
                 </div>
                 <div class="col-3" id="barraLaterale" >
                     <sidebar>
@@ -125,6 +139,15 @@
                                     <p style="text-align:center;width:100%"><?php isolamentoDomiciliare($array_content) ?></p>
                                 </div>
                             </aside>
+                            <aside id="spaceBL">
+                                <div class="row">
+                                <form action="rapporto.php" style="align-content:center" >
+                                      <button type="submit" >
+                                        ALTRE INFORMAZIONI
+                                      </button>  
+                                </form>
+                                </div>
+                            </aside>
                         </div>
                         
                     </div>
@@ -140,7 +163,7 @@
             </a>
         </div>
         
-        <footer style="background-color:black;height:150px">
+        <footer style="background-color:black;height:150px;margin-top:2rem">
             
         </footer>
       

@@ -1,3 +1,10 @@
+body{
+    background-image: url(../contentMedia/COVID-19.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 #divtab{
     padding-top: 50px;
 }

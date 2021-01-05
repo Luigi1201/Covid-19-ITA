@@ -102,9 +102,12 @@
                     </div>    
                 </div>      
             </div>
+            <div class="container-fluid" style="margin-top:5rem">
+                <h3>RAPPORTO GIORNALIERO (ULTIMI 10 GIORNI) :</h3>
+            </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,10)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,10)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,10);?> </p>
@@ -119,7 +122,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,9)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,9)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,9)?> </p>
@@ -134,7 +137,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,8)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,8)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,8)?> </p>
@@ -149,7 +152,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,7)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,7)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,7)?> </p>
@@ -164,7 +167,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,6)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,6)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,6)?> </p>
@@ -179,7 +182,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,5)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,5)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,5)?> </p>
@@ -194,7 +197,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,4)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,4)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,4)?> </p>
@@ -209,7 +212,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,3)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,3)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,3)?> </p>
@@ -224,7 +227,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,2)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,2)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,2)?> </p>
@@ -239,7 +242,7 @@
             </div>
             <div class="col-12" style="border: 2px solid black">
                 <div class="row">
-                    <h3 id="content">DATA <?php printData($array_content,1)?></h3>
+                    <h3 id="content">DATA: <?php printData($array_content,1)?></h3>
                 </div>
                 <div class="row">
                     <p id="content"> <?php printInfo($arrayRatio,$array_content,1)?> </p>
