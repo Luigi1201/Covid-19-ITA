@@ -1,7 +1,8 @@
 # Covid-19-ITALIA
-Consegna per DEXMA.
+**Consegna per DEXMA.**
 
-𝙎𝙏𝙍𝙐𝙏𝙏𝙐𝙍𝘼
+## STRUTTURA
+\
 progetto_covid/
 	contentMedia/
 		faicon/
@@ -21,3 +22,4 @@ progetto_covid/
 		rapporto.php
 		tabels.php
 	index.php
+\
