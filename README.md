@@ -1,7 +1,7 @@
 # Covid-19-ITALIA
 **Consegna per DEXMA.**
 
-## STRUTTURA
+### STRUTTURA
 \
 progetto_covid/
 	contentMedia/
@@ -23,7 +23,7 @@ progetto_covid/
 		tabels.php
 	index.php
 \
-##Qui troverai:
+###Qui troverai:
 *Dati sui contagi
 *Dati sui deceduti
 *Grafici 
