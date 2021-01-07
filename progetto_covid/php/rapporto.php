@@ -76,7 +76,7 @@
                     <h3 id="content" style="margin-top:50px">ANDAMENTO RAPPORTO ULTIMI 10 GIORNI</h3>
                 </div>
                 <div class="row">
-                    <p id="content"> ANDAMENTO DEL RAPPORTO NEGLI ULTIMI 10 GIORNI (%)</p>
+                    <p id="content"> ANDAMENTO DEL RAPPORTO TRA CASI GIORNALIERI/TAMPONI GIORNALIERI DEGLI ULTIMI 10 GIORNI IN PERCENTUALE(%)</p>
                 </div>
                 <div class="row">
                     <div class="andamento-chart-container">

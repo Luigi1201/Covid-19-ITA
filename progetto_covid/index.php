@@ -64,10 +64,10 @@
             <div class="row">
                 <div class="col-9">
                     <div class="container-fluid">
-                        <h6 style="margin-top:8rem;width:100%;text-align:center">
-                            <font face="Comic sans MS" size="5">NUOVI POSITIVI</font>
-                        </h6>  
                         <div class="chart-container">
+                            <h6 style="margin-top:8rem;width:100%;text-align:center">
+                                <font face="Comic sans MS" size="5">NUOVI POSITIVI</font>
+                            </h6>  
                             <div class="line-chart-container">
                                 <canvas id="myCanvas"></canvas>
                             </div>              

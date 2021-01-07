@@ -8,7 +8,7 @@ $(document).ready(function(){
         type: 'pie',
         // The data for our dataset
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#ffd700','#808000'],
@@ -33,7 +33,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#87ceeb','#c0c0c0'],
@@ -56,7 +56,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#dda0dd','#cd5c5c'],
@@ -79,7 +79,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#6a5acd','#daa520'],
@@ -102,7 +102,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#b8860b','#add8e6'],
@@ -125,7 +125,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#6a5acd','#daa520'],
@@ -148,7 +148,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#ffd700','#808000'],
@@ -171,7 +171,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['blue','red'],
@@ -194,7 +194,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#dda0dd','#cd5c5c'],
@@ -217,7 +217,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["NUOVI CASI(%)", "TAMPONI GIORNALIERI(%)"],
+            labels: ["TAMPONI POSITIVI(%)", "TAMPONI NEGATIVI(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#6a5acd','#daa520'],
@@ -252,7 +252,7 @@ $(document).ready(function(){
         data: {
             labels: [ arrobj[1]['data'], arrobj[2]['data'], arrobj[3]['data'], arrobj[4]['data'], arrobj[5]['data'], arrobj[6]['data'], arrobj[7]['data'], arrobj[8]['data'], arrobj[9]['data'], arrobj[10]['data']],
             datasets: [{
-                label: 'RAPPORTO(%)',
+                label: 'NUOVI CASI DI POSITIVITÁ(%)',
                 backgroundColor: '#8fbc8f',
                 borderColor: '#8fbc8f',
                 data: [arrobj_Ratio[0],arrobj_Ratio[1],arrobj_Ratio[2],arrobj_Ratio[3],arrobj_Ratio[4],arrobj_Ratio[5],arrobj_Ratio[6],arrobj_Ratio[7],arrobj_Ratio[8],arrobj_Ratio[9]]      
@@ -274,7 +274,7 @@ $(document).ready(function(){
     var chart2 = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["CASI TOTALI(%)", "TAMPONI TOTALI(%)"],
+            labels: ["TAMPONI CON ESITO POSITIVO(%)", "TAMPONI CON ESITO NEGATIVO(%)"],
             datasets: [{
                 label: 'RAPPORTO',
                 backgroundColor: ['#ff7f50','#00ced1'],
