@@ -23,3 +23,9 @@ progetto_covid/
 		tabels.php
 	index.php
 \
+##Qui troverai:
+*Dati sui contagi
+*Dati sui deceduti
+*Grafici 
+*Tabelle
+	*rapporto giornaliero nuovi casi/ tamponi effettuati
