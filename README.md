@@ -3,10 +3,10 @@
 Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ultimi dieci giorni esposte in grafici e tabelle prelevate da file csv.
 
 #### Struttura 
-progetto_covid/	
+```progetto_covid/	
 |
-```├──```contentMedia/```
-│   ├── ```faicon/
+├── contentMedia/
+│   ├── faicon/
 				foto	
 				COVID-19.jpg
 				Freccia.jpg		
@@ -22,7 +22,8 @@ progetto_covid/
 		functions.php
 		rapporto.php
 		tabels.php
-	index.php```
+	index.php
+```
 ###Qui troverai:
 *Dati sui contagi
 *Dati sui deceduti
