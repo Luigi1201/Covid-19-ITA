@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="it">
-        <title>Consegna</title>
+        <title>Consegna - Homepage</title>
         <meta charset="UTF-8">
         <meta name="author" content="Riggi Luigi">
         <meta name="description" content="Consegna">
@@ -62,7 +62,7 @@
         <div id="separatore"><h1 style="width:100%;text-align:center;text-decoration:underline">COVID-19 ITALIA</h1></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-9">
+                <div class="col-12 col-md-9">
                     <div class="container-fluid">
                         <div class="chart-container">
                             <h6 style="margin-top:8rem;width:100%;text-align:center">
@@ -86,14 +86,18 @@
                     </div>
 
                 </div>
-                <div class="col-3" id="barraLaterale" >
+                <div class="col-12 col-md-3" id="barraLaterale" >
                     <sidebar>
                     <div class="container-fluid">
                         <div class="col">
-                            <div class="row" id=titleBL>
+                            <div class="row" id="titleBL">
                                 <strong>
-                                    <u>STATISTICHE AGGIORNATE AL <br>
-                                        <?php printData($array_content,9)?>
+                                    <u>
+                                        <p style="text-align:center">
+                                            STATISTICHE AGGIORNATE AL <br>
+                                            <?php       printData($array_content,9)
+                                            ?>
+                                        </p>    
                                     </u>
                                 </strong>
                             </div>

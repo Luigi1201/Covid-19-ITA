@@ -1,3 +1,5 @@
+/* Utile a rapporto.php */
+
 $(document).ready(function(){
     var tampGiornalieri = parseInt(arrobj[10]['tamponi']) - parseInt(arrobj[9]['tamponi']);
     var ratio_nptg = (parseInt(arrobj[10]['nuovi_positivi'])/tampGiornalieri)*100;

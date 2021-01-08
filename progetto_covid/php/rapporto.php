@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+Pagina dedicata alla visualizzazione del rapporto sia tra casi_totali/tamponi_totali sia tra casi_giornalieri/tamponi_giornalieri in percentuale (%) + andamento nuovi casi di positività. Il tutto prendendo in considerazione gli ultimi 10 giorni.
+-->
 <html>
     <head lang="it">
         <title>RAPPORTO</title>

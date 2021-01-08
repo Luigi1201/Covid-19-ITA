@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Pagina dedicata alla visualizzazione di tabelle(Bootstrap) contenenti i dati presi da file csv -->
 <html>
     <head lang="it">
         <title>TABELLE DATI</title>
@@ -9,7 +10,6 @@
         <link rel="stylesheet" href="../css/stileTables.css">
         <link rel="stylesheet" href="../css/menu.css">
          <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="../contentMedia/favicon/apple-icon-57x57.png">

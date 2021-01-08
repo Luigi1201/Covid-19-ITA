@@ -1,3 +1,5 @@
+/* Utile a index.php */
+
 function changeData() {
     var length = arrobj.length;
     var datastart;

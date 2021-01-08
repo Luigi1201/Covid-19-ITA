@@ -1,3 +1,4 @@
+<!-- Contiene tutte le funzioni in php utili alla creazione delle pagine -->
 <?php
  
     function insert(){    
