@@ -8,6 +8,7 @@ Dati aggiornati quotidianamente riguardanti casi,tamponi,ricoveri,ingressi in te
   * Contenenti i dati separati per giorno (degli ultimi dieci giorni)
 * Grafici 
   * Contenenti l'andamento tra casi totali/tamponi totali, il rapporto tra casi giornalieri/tamponi giornalieri. Sono presenti anche l'andamento dei nuovi casi e la percentuale tra deceduti/casi totali.
+  * Utilizzo di grafici Chart.js a torta (Pie), a barre (Bar) e a ciambella (Doughnut).
 
 ### Struttura 
 ```
