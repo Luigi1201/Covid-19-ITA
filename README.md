@@ -4,11 +4,11 @@ Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ult
 
 ### Qui troverai
 ```
-*Dati sui contagi
-*Dati sui deceduti
-*Grafici 
+Dati aggiornati quotidianamente riguardanti casi,tamponi,ricoveri,ingressi in terapia intensiva e molto altro ancora,per esporre questi dati vengono utilizzati:
 *Tabelle
-*rapporto giornaliero nuovi casi/ tamponi effettuati
+** contenenti i dati separati per giorno (degli ultimi dieci giorni)
+*Grafici 
+** contenenti l'andamento tra casi totali/tamponi totali, il rapporto tra casi giornalieri/tamponi giornalieri. Sono presenti anche l'andamento dei nuovi casi e la percentuale tra deceduti/casi totali.
 ```
 
 #### Struttura 
