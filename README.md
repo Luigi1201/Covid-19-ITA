@@ -1,14 +1,14 @@
-# Covid-19-ITALIA
-**Consegna per DEXMA.**
+# Covid-19-Italia
+#### Consegna per DEXMA
+Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ultimi dieci giorni esposte in grafici e tabelle prelevate da file csv.
 
-### STRUTTURA
-\
-progetto_covid/
+#### Struttura 
+progetto_covid/	
 	contentMedia/
-		faicon/
-			foto	
-		COVID-19.jpg
-		Freccia.jpg		
+			faicon/
+				foto	
+				COVID-19.jpg
+				Freccia.jpg		
 	css/
 		menu.css
 		rapporto.css
@@ -21,8 +21,7 @@ progetto_covid/
 		functions.php
 		rapporto.php
 		tabels.php
-	index.php
-\
+	index.php```
 ###Qui troverai:
 *Dati sui contagi
 *Dati sui deceduti
