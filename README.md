@@ -4,8 +4,9 @@ Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ult
 
 #### Struttura 
 progetto_covid/	
-	contentMedia/
-			faicon/
+|
+```├──```contentMedia/```
+│   ├── ```faicon/
 				foto	
 				COVID-19.jpg
 				Freccia.jpg		
