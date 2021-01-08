@@ -2,6 +2,15 @@
 #### Consegna per DEXMA
 Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ultimi dieci giorni esposte in grafici e tabelle prelevate da file csv.
 
+### Qui troverai
+```
+*Dati sui contagi
+*Dati sui deceduti
+*Grafici 
+*Tabelle
+*rapporto giornaliero nuovi casi/ tamponi effettuati
+```
+
 #### Struttura 
 ```
 progetto_covid/
@@ -24,9 +33,7 @@ progetto_covid/
 │   ├── tabels.php
 ├── index.php
 ```
-###Qui troverai:
-*Dati sui contagi
-*Dati sui deceduti
-*Grafici 
-*Tabelle
-	*rapporto giornaliero nuovi casi/ tamponi effettuati
+
+### Aggiornamento dei dati
+Ogni giorno alle ore 17:00
+
