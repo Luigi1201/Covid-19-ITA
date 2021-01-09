@@ -94,8 +94,12 @@ Pagina dedicata alla visualizzazione del rapporto sia tra casi_totali/tamponi_to
                     <h3 id="content" style="margin-top:50px">RAPPORTO CASI TOTALI/TAMPONI TOTALI</h3>
                 </div>
                 <div class="row">
-                    <p id="content"><?php printRatioTot($array_content) ?></p>
-                    <p id="content"> CONFRONTO TRA I CASI TOTALI E I TAMPONI TOTALI IN PERCENTUALE </p>
+                    <p id="content">
+                        CONFRONTO TRA I CASI TOTALI E I TAMPONI TOTALI IN PERCENTUALE
+                    </p>
+                    <p id="content">
+                        <?php printRatioTot($array_content) ?>
+                    </p>
                 </div>
                 <div class="row">
                     <div class="tot-chart-container">

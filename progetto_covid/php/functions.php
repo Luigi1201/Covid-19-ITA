@@ -1,6 +1,7 @@
 <!-- Contiene tutte le funzioni in php utili alla creazione delle pagine -->
 <?php
  
+    /* Per inserire i dati del file csv in un array utilizzo la funzione insert()*/
     function insert(){    
         $filename='https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv';
         $filecsv = array_map('str_getcsv', file($filename));
@@ -11,7 +12,8 @@
         return $filecsv;
         
     }
-
+    
+    /* Per prendere in considerazione soltanto gli elementi desiderati utilizzo la funzione setNrElements($array_content,$nr) */
     function setNrElements($array_content,$nr){
         $nr_elements=count($array_content);
         $start=$nr_elements-$nr;
@@ -27,6 +29,7 @@
         return $relevant_data;
     }  
 
+    /* Per calcolare il rapporto giornaliero nuovi_positivi/tamponi giornalieri in percentuale utilizzo la funzione getRatioGiornaliero($array_content), che restituisce un array contenente i rapporti degli ultimi degli giorni */
     function getRatioGiornaliero($array_content){
         $arrayRatio=array();
         $j=9;
@@ -42,6 +45,7 @@
         return $arrayRatio;
     }  
 
+    /* Per stampare i dati utilizzo la funzione tables($array_content), che li organizza in una mia rappresentazione di tabella creata con Bootstrap. Viene creata una tabella per ogni giorno in modo da rendere la visualizzazione il più ordinata possibile, e comprensibile a colpo d'occhio. */
     function tables($array_content){
  
         for($i=9;$i>=0;$i--){
@@ -88,12 +92,14 @@
     
     } 
 
+    /* Per stampare a video la data si può utilizzare la funzione printData($array_content,$nr), specificando la posizione nell'array si arriva a visualizzare la data del giorno desiderato */
     function printData($array_content,$nr){
         $middle = strtotime($array_content[$nr]['data']);
         $new_date = date('d-m-Y', $middle);
         echo $new_date;
     }
 
+    /* Funzione utilizzata per stampare informazioni quali nuovi casi, tamponi  giornalieri e rapporto nuovi/casi tamponi giornalieri all'interno di rapporto.php */
     function printInfo($arrayRatio,$array_content,$nr){
         $tampgiornoi=(integer)$array_content[$nr]['tamponi'];
         $tampgiornimeno1=(integer)$array_content[$nr-1]['tamponi'];
@@ -103,6 +109,7 @@
         echo '<br>RAPPORTO NUOVI CASI/TAMPONI GIORNALIERI : '.$arrayRatio[$nr-1]."%"; 
     }
 
+    /* Funzione utilizzata in rapporto.php per stampare a video informazioni riguardanti un grafico */
     function printRatioTot($array_content){
         $casi=(integer)$array_content[10]['totale_casi'];
         $tamponi=(integer)$array_content[10]['tamponi'];
@@ -110,6 +117,11 @@
         echo "RAPPORTO TOTALE CASI/TOTALE TAMPONI EFFETTUATI: ".$rapporto."%";
     }
 
+
+
+    /* INIZIO DELLE FUNZIONI PER LA STAMPA NELLA BARRA LATERALE DI index.php */
+
+    /* Funzione per stampa dati nel primo blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e il numero di positivi del giorno */
     function lateralBar1($array_content){
         $nv=$array_content[9]['nuovi_positivi'];
         if($nv >= 0){
@@ -117,7 +129,8 @@
         }
         echo '<br>'."totali: ".$array_content[9]['totale_casi'];
     }
-
+    
+    /* Funzione per stampa dati nel secondo blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e i deceduti del giorno */
     function deceduti($array_content){
         $deceduti9=(int)$array_content[9]['deceduti'];
         $deceduti8=(int)$array_content[8]['deceduti'];
@@ -130,6 +143,7 @@
         echo '<br>'."totali: ".$array_content[9]['deceduti'];
     }
 
+    /* Funzione per stampa dati nel terzo blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e il numero di dimessi/guariti del giorno */
     function dimessiGuariti($array_content){
         $dg9=(int)$array_content[9]['dimessi_guariti'];
         $dg8=(int)$array_content[8]['dimessi_guariti'];
@@ -142,6 +156,7 @@
         echo '<br>'."totali: ".$array_content[9]['dimessi_guariti'];
     }
 
+    /* Funzione per stampa dati nel quarto blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e il numero degli attuali positivi */
     function attualmentePositivi($array_content){
         $attpos9=(int)$array_content[9]['totale_positivi'];
         $attpos8=(int)$array_content[8]['totale_positivi'];
@@ -154,6 +169,7 @@
         echo '<br>'."totali: ".$array_content[9]['totale_positivi'];
     }
     
+    /* Funzione per stampa dati nel quinto blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e i posti in terapia intensiva occupati del giorno */
     function terapiaIntensiva($array_content){
         $terint9=(int)$array_content[9]['terapia_intensiva'];
         $terint8=(int)$array_content[8]['terapia_intensiva'];
@@ -166,6 +182,7 @@
         echo '<br>'."totali: ".$array_content[9]['terapia_intensiva'];
     }
     
+    /* Funzione per stampa dati nel sesto blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e i ricoverati con sintomi del giorno */
     function ricoveratiConSintomi($array_content){
         $rcs9=(int)$array_content[9]['ricoverati_con_sintomi'];
         $rcs8=(int)$array_content[8]['ricoverati_con_sintomi'];
@@ -178,6 +195,7 @@
         echo '<br>'."totali: ".$array_content[9]['terapia_intensiva'];
     }
     
+    /* Funzione per stampa dati nel settimo blocco della barra laterale di index.php. Viene stampata la variazione rispetto al giorno precedente e il numero di casi in isolamento domiciliare del giorno */
     function isolamentoDomiciliare($array_content){
         $isDomiciliare9=(int)$array_content[9]['isolamento_domiciliare'];
         $isDomiciliare8=(int)$array_content[8]['isolamento_domiciliare'];
@@ -190,8 +208,5 @@
         echo '<br>'."totali: ".$array_content[9]['isolamento_domiciliare'];
     }
 
-    function getCSV(){
-        $csv='https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv';   
-        return $csv;
-    }
+    /* FINE DELLE FUNZIONI PER LA STAMPA NELLA BARRA LATERALE DI index.php */
 ?>

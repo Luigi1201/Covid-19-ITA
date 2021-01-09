@@ -30,6 +30,7 @@ ul#menu li {
     border-top: 1px solid red;
     float: left; /* elementi su singola riga */
 }
+
 ul#menu li a {
     color: #fff;
     display: block;

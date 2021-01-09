@@ -28,9 +28,9 @@ $(document).ready(function(){
     changeData();
     var ctx = document.getElementById('myCanvas').getContext('2d');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
+        // tipo di chart
         type: 'line',
-        // The data for our dataset
+        // dati
         data: {
             labels: [ arrobj[0]['data'], arrobj[1]['data'], arrobj[2]['data'], arrobj[3]['data'], arrobj[4]['data'], arrobj[5]['data'], arrobj[6]['data'], arrobj[7]['data'], arrobj[8]['data'], arrobj[9]['data']],
             datasets: [{
@@ -41,7 +41,7 @@ $(document).ready(function(){
                     
             }]
         },
-        // Configuration options go here
+        // configurazione opzioni
         options: {
             legend : {
                 display : true,
