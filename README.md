@@ -5,7 +5,8 @@ Informazioni riguardanti la situazione covid-19 in Italia, statistiche degli ult
 ### Qui troverai
 Dati aggiornati quotidianamente riguardanti casi,tamponi,ricoveri,ingressi in terapia intensiva e molto altro ancora,per esporre questi dati vengono utilizzati:
 * Tabelle
-  * Contenenti i dati separati per giorno (degli ultimi dieci giorni)
+  * Contenenti i dati separati per giorno (degli ultimi dieci giorni in Italia)
+  * Dati principali delle regioni italiane
 * Grafici 
   * Contenenti l'andamento tra casi totali/tamponi totali, il rapporto tra casi giornalieri/tamponi giornalieri. Sono presenti anche l'andamento dei nuovi casi e la percentuale tra deceduti/casi totali.
   * Utilizzo di grafici Chart.js a torta (Pie), a barre (Bar) e a ciambella (Doughnut).
