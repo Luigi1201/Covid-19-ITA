@@ -209,4 +209,34 @@
     }
 
     /* FINE DELLE FUNZIONI PER LA STAMPA NELLA BARRA LATERALE DI index.php */
+
+
+    /* Funzione utilizzata in index.php per caricare l'array contenente le regioni con i dati di ognuna */
+    function getArrayRegioni(){
+        $filename='https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni-latest.csv';
+        $regionicsv = array_map('str_getcsv', file($filename));
+        array_walk($regionicsv,function(&$a)use ($regionicsv){
+            $a=array_combine($regionicsv[0],$a);
+        });
+        array_shift($regionicsv);
+        return $regionicsv;
+    }
+
+    /* Funzione utilizzata in index.php per stampare in una tabella i dati che ritengo fondamentali per comprendere l'andamento di ogni regione */
+    function getRegioni($regioni){
+        for($i=0;$i<count($regioni);$i++){
+            $middle = strtotime($regioni[$i]['data']);
+            $new_date = date('d-m-Y', $middle);
+            $regioni[$i]['data']=$new_date;
+        }
+        for($i=0;$i<count($regioni);$i++){
+            echo '<div class="row">'.
+                    '<div class="col" id="tabellaRegioni">'.$regioni[$i]['denominazione_regione'].'</div>'.
+                    '<div class="col" id="tabellaRegioni">'.$regioni[$i]['totale_casi'].'</div>'.
+                    '<div class="col" id="tabellaRegioni">'.$regioni[$i]['tamponi'].'</div>'.
+                    '<div class="col" id="tabellaRegioni">'.$regioni[$i]['nuovi_positivi'].'</div>'
+                .'</div>';
+        }
+    }
+
 ?>

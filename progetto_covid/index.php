@@ -83,8 +83,7 @@
                                 <canvas id="myCanvas2"></canvas>
                             </div>    
                         </div>
-                    </div>
-
+                    </div>                    
                 </div>
                 <div class="col-12 col-md-3" id="barraLaterale" >
                     <sidebar>
@@ -160,13 +159,40 @@
             </div>
             
         </div>
-        
+        <div class="container" style="width:95%;margin-top:5rem">
+            <h2 style="width:100%;text-align:center;margin-top:2rem;margin-bottom:2rem">
+                <font face="Comic sans MS" > REGIONI </font>
+            </h2>
+            <p style="text-align:center">
+                 DATI AGGIORNATI AL  
+                <?php 
+                    $regioni=getArrayRegioni();
+                    printData($regioni,count($regioni)-1);
+                ?>
+            </p>
+            <div class="row">
+                <div class="col" style="background-color:#d2691e" id="tabellaRegioni">
+                    NOME REGIONE
+                </div>
+                <div class="col" style="background-color:#d2691e" id="tabellaRegioni">
+                    TOTALE CASI
+                </div>
+                <div class="col" style="background-color:#d2691e" id="tabellaRegioni">
+                    TAMPONI TOTALI
+                </div>
+                <div class="col" style="background-color:#d2691e" id="tabellaRegioni">
+                    NUOVI POSITIVI
+                </div>
+                </div>
+                <?php
+                    getRegioni($regioni); 
+                ?>
+        </div>
         <div id="start">
             <a href="#inizio">
              <img src="contentMedia/Freccia.png" width="40px" height="40px">
             </a>
         </div>
-        
         <footer style="background-color:black;height:150px;margin-top:2rem">
             
         </footer>
