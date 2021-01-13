@@ -38,4 +38,4 @@ progetto_covid/
 Ogni giorno alle ore 17:00
 
 ### DEMO ONLINE
-http://lr12.altervista.org/
+https://lr12.altervista.org/
