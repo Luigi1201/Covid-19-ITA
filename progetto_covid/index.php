@@ -193,10 +193,20 @@
              <img src="contentMedia/Freccia.png" width="40px" height="40px">
             </a>
         </div>
-        <footer style="background-color:black;height:150px;margin-top:2rem">
-            
+        
+        <footer style="background-color:black;height:150px;margin-top:3rem">
+            <div class="container-fluid" style="height:150px">
+                <div class="row" style="height:30%;margin-top:3rem"></div>
+                <div class="row" style="height:70%">
+                    <p style="text-align:center;width:100%;color:white;bottom:0px;">
+                        - Covid-19 statistiche Italia -
+                    </p>
+                    <p style="text-align:center;width:100%;color:white;text-align:bottom">
+                        luigi.riggi1201@gmail.com 
+                    </p>
+                </div>
+            </div>
         </footer>
-      
            
     </body>
 </html>

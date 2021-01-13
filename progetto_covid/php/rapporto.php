@@ -263,10 +263,21 @@ Pagina dedicata alla visualizzazione del rapporto sia tra casi_totali/tamponi_to
                 </div>      
             </div> 
         </div>
-        
-        <footer style="background-color:black;height:150px">
-            
+    
+        <footer style="background-color:black;height:150px;margin-top:3rem">
+            <div class="container-fluid" style="height:150px">
+                <div class="row" style="height:30%;margin-top:3rem"></div>
+                <div class="row" style="height:70%">
+                    <p style="text-align:center;width:100%;color:white;bottom:0px;">
+                        - Covid-19 statistiche Italia -
+                    </p>
+                    <p style="text-align:center;width:100%;color:white;text-align:bottom">
+                        luigi.riggi1201@gmail.com 
+                    </p>
+                </div>
+            </div>
         </footer>
+        
         <script src="../js/ratioScript.js"></script>
     </body>
 </html>    
