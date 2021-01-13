@@ -37,3 +37,5 @@ progetto_covid/
 ### Aggiornamento dei dati
 Ogni giorno alle ore 17:00
 
+### DEMO ONLINE
+http://lr12.altervista.org/
