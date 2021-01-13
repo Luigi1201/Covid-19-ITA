@@ -29,39 +29,32 @@ body{
 
 .chart-container{
     width:100%;
-    height:400px;
     margin: auto;
-    
+    margin-bottom:3rem;
 }
 
 .pie-chart-container{
-    width:35rem;
-    height:100%;
+    width:40%;
     margin:0 auto;
-    
 }
 
 .andamento-chart-container{
     width:100%;
-    height: 500px;
     margin:0 auto;
 }
 
 .andamento-chart{
-    width:800px;
-    height:100%;
+    width:50%;
     margin:0 auto;
 }
 
 .tot-chart-container{
     width:100%;
-    height: 400px;
     margin:0 auto;
 }
 
 .tot-chart{
-    width:35rem;
-    height:100%;
+    width:50%;
     margin:0 auto;
 }
 
